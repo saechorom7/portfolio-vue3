@@ -1,122 +1,171 @@
-/* 🔥 기본 스타일 */
+/* 🎀 전체 스타일 */
 body {
-    font-family: 'Pretendard', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #F2E5D5; /* 패션-1 */
-    color: #400101; /* 패션-5 */
-  }
-  
-  /* 🔥 네비게이션 바 */
-  .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgba(140, 86, 55, 0.9); /* 패션-2 */
-    padding: 15px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: 0.3s;
-  }
-  
-  .nav-links a:hover {
-    background: #BF8F73; /* 패션-3 */
-  }
-  
-  /* 🔥 Hero 섹션 (첫 화면) */
-  .hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: linear-gradient(to right, #730202, #400101); /* 패션-4 → 패션-5 */
-    color: white;
-  }
-  
-  .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-  
-  .hero .btn {
-    background: #F2E5D5; /* 패션-1 */
-    color: #730202; /* 패션-4 */
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s;
-  }
-  
-  .hero .btn:hover {
-    background: #BF8F73; /* 패션-3 */
-    color: white;
-  }
-  
-  /* 🔥 공통 섹션 스타일 */
-  .section {
-    padding: 80px 20px;
-    text-align: center;
-  }
-  
-  .section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #8C5637; /* 패션-2 */
-  }
-  
-  /* 🔥 프로젝트 카드 */
-  .project-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* 🔥 연락처 섹션 */
-  .contact {
-    background: #8C5637; /* 패션-2 */
-    color: white;
-    padding: 50px;
-  }
-  
-  .contact a {
-    color: #F2E5D5; /* 패션-1 */
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .contact a:hover {
-    text-decoration: underline;
-  }
-  
+  font-family: 'Pretendard', sans-serif;
+  background-color: #FFF7F0;
+  color: #5B3A29;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  cursor: url('/cursor.cur') 13 13, auto; 
+}
+
+a {
+  cursor: url('/cursor.cur') 13 13, pointer;
+}
+
+button {
+  cursor: url('/cursor.cur') 13 13, pointer;
+}
+
+/* 모든 요소의 스크롤바 숨기기 */
+html, body {
+  overflow: auto;
+  -ms-overflow-style: none; /* IE, Edge에서 스크롤바 숨기기 */
+  scrollbar-width: none; /* Firefox에서 스크롤바 숨기기 */
+}
+
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge에서 스크롤바 숨기기 */
+}
+
+/* 🎀 네비게이션 바 */
+.navbar {
+  background-color: #FFB6C1;
+  padding: 15px;
+  border-radius: 20px;
+  width: 90%;
+  margin: 0px auto;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  background: #FF69B4;
+  padding: 10px 15px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: #FF1493;
+}
+
+/* 🎀 Hero 섹션 */
+.hero {
+  background: linear-gradient(to bottom, #FFD1DC, #FFF0F5);
+  padding: 100px 20px;
+  border-radius: 30px;
+  margin: 20px;
+}
+
+/* 🎀 버튼 스타일 */
+.btn {
+  background: #FF69B4;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: url('/cursor.cur') 13 13, auto; 
+}
+
+.btn:hover {
+  background: #FF1493;
+  transform: scale(1.1);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: scale(0.9);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 🎀 섹션 스타일 */
+.section {
+  background: white;
+  padding: 50px;
+  border-radius: 30px;
+  margin: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 🎀 프로젝트 카드 */
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-card {
+  background: #FFF0F5;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 🎀 몽글몽글한 커서 */
+.cursor {
+  width: 5px;
+  height: 5px;
+  background-color: #FF69B4;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+}
+
+/* 🎀 다크 모드 */
+.dark-mode {
+  background-color: #2B2B2B;
+  color: #FFC0CB;
+}
+
+.dark-mode .navbar {
+  background-color: #FF69B4;
+}
+
+.dark-mode .hero {
+  background: linear-gradient(to bottom, #4A4A4A, #2B2B2B);
+}
+
+.dark-mode .btn {
+  background: #FFB6C1;
+  color: #5B3A29;
+}
+
+.dark-mode .btn:hover {
+  background: #FF69B4;
+  color: white;
+}
+
+/* 🎀 스크롤 페이드인 효과(애니메이션) */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

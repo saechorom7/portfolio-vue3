@@ -1,5 +1,5 @@
 <script setup>
-import './assets/style.css';
+import './assets/style.css'; /* 스타일 연결 */
 import NavBar from './components/NavBar.vue';
 import Hero from './components/Hero.vue';
 import About from './components/About.vue';
@@ -16,16 +16,20 @@ import Contact from './components/Contact.vue';
     <Skills />
     <Projects />
     <Contact />
+    <footer class="footer">
+      <p>🐰 Designed & Developed by 유진 | © 2025</p>
+    </footer>
   </div>
 </template>
 
 <style scoped>
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f5f5f5;
-  color: #333;
-  font-size: 1rem;
+.footer {
+  background-color: #FFB6C1;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  border-radius: 20px 20px 0px 0px;
 }
 </style>
+
