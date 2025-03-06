@@ -1,6 +1,6 @@
 <template>
     <section id="skills" class="section">
-      <h2>🚀 기술 스택</h2>
+      <h2>🧁 기술 스택</h2>
       <ul>
         <li>HTML</li>
         <li>CSS</li>

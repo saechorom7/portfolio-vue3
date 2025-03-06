@@ -1,6 +1,6 @@
 <template>
     <section id="contact" class="section">
-      <h2>📞 연락처</h2>
+      <h2>💟 연락처</h2>
       <p>이메일: example@email.com</p>
       <p>GitHub: <a href="https://github.com/your-github" target="_blank">github.com/your-github</a></p>
     </section>

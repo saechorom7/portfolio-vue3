@@ -1,0 +1,122 @@
+/* 기본 네비게이션 스타일 */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: -80px;
+    left: 0;
+    background: transparent;
+    border-radius: 0px 0px 20px 20px;
+    padding: 0;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, padding 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  
+  .navbar.scrolled {
+    transform: translateY(70px);
+    background: #FFD1DC;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1.logo {
+    color: #40210F;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-links li {
+    padding: 40px 30px 30px 30px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #40210F;
+    font-weight: bold;
+  }
+  
+  .nav-links li:hover {
+    background: #fce2eb;
+    transition: all 0.7s ease;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+  }
+  
+  /* 🎀 버튼 스타일 */
+  .btn {
+    background: #EEE1CC;
+    color: #40210F;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: url('/cursor.cur') 13 13, auto;
+  }
+  
+  .btn:hover {
+    background: #EEE1CC;
+    transform: scale(1.1);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn:active {
+    transform: scale(0.9);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  /* 햄버거 메뉴 버튼 (모바일용) */
+  .menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #40210F;
+  }
+  
+  /* 반응형 스타일 */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 0px;
+      gap: 0px;
+      background: #E99AAC;
+      flex-direction: row;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0px;
+      border-radius: 0px 0px 20px 20px;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-links ul {
+      margin: 10px 0;
+    }
+  
+    .nav-links li {
+      padding: 10px 0;
+    }
+  }

@@ -1,6 +1,6 @@
 <template>
   <section id="projects" class="section">
-    <h2>📂 프로젝트</h2>
+    <h2>🍨 프로젝트</h2>
     <div class="project-container">
       <div v-for="(project, index) in projects" :key="index" class="project-card">
         <div class="project-content">
@@ -16,8 +16,8 @@
 import { ref } from 'vue';
 
 const projects = ref([
-  { title: "🍓 프로젝트 1", description: "귀엽고 감성적인 Vue.js 기반 웹 애플리케이션 💖" },
-  { title: "🐻 프로젝트 2", description: "몽글몽글한 감성의 반응형 포트폴리오 ✨" }
+  { title: "🥛 프로젝트 1", description: "귀엽고 감성적인 Vue.js 기반 웹 애플리케이션" },
+  { title: "🍥 프로젝트 2", description: "몽글몽글한 감성의 반응형 포트폴리오" }
 ]);
 </script>
 

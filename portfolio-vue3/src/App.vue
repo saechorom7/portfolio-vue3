@@ -1,5 +1,5 @@
 <script setup>
-import './assets/style.css'; /* 스타일 연결 */
+import './assets/styles/style.css';
 import NavBar from './components/NavBar.vue';
 import Hero from './components/Hero.vue';
 import About from './components/About.vue';
@@ -23,7 +23,7 @@ onMounted(() => {
   <div>
     <!-- 로딩 화면 -->
     <div v-if="isLoading" id="loading">
-      <span>🍩 로딩 중<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></span>
+      <span>☁ 로딩 중<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></span>
     </div>
 
     <NavBar />
@@ -33,15 +33,15 @@ onMounted(() => {
     <Projects />
     <Contact />
     <footer class="footer">
-      <p>🐰 Designed & Developed by 유진 | © 2025</p>
+      <p>🐇 Designed & Developed by 유진 | © 2025</p>
     </footer>
   </div>
 </template>
 
 <style scoped>
 .footer {
-  background-color: #FFB6C1;
-  color: white;
+  background-color: #FFD1DC;
+  color: #fffdf7;
   text-align: center;
   padding: 15px;
   font-size: 14px;
