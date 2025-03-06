@@ -1,0 +1,122 @@
+/* 🔥 기본 스타일 */
+body {
+    font-family: 'Pretendard', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F2E5D5; /* 패션-1 */
+    color: #400101; /* 패션-5 */
+  }
+  
+  /* 🔥 네비게이션 바 */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(140, 86, 55, 0.9); /* 패션-2 */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .nav-links a:hover {
+    background: #BF8F73; /* 패션-3 */
+  }
+  
+  /* 🔥 Hero 섹션 (첫 화면) */
+  .hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to right, #730202, #400101); /* 패션-4 → 패션-5 */
+    color: white;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero .btn {
+    background: #F2E5D5; /* 패션-1 */
+    color: #730202; /* 패션-4 */
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .hero .btn:hover {
+    background: #BF8F73; /* 패션-3 */
+    color: white;
+  }
+  
+  /* 🔥 공통 섹션 스타일 */
+  .section {
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #8C5637; /* 패션-2 */
+  }
+  
+  /* 🔥 프로젝트 카드 */
+  .project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 🔥 연락처 섹션 */
+  .contact {
+    background: #8C5637; /* 패션-2 */
+    color: white;
+    padding: 50px;
+  }
+  
+  .contact a {
+    color: #F2E5D5; /* 패션-1 */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .contact a:hover {
+    text-decoration: underline;
+  }
+  
