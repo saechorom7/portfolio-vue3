@@ -3,6 +3,8 @@ import App from './App.vue'
 
 const app = createApp(App)
 
+app.mount('#app') // Vue 앱 마운트 후 실행
+
 // 스크롤 애니메이션 적용
 const handleScroll = () => {
     const sections = document.querySelectorAll('.fade-in');
@@ -12,11 +14,11 @@ const handleScroll = () => {
         section.classList.add('visible');
       }
     });
-  };
-  
-  window.addEventListener('scroll', handleScroll);
-  handleScroll(); // 초기 실행
-  
+};
+
+window.addEventListener('scroll', handleScroll);
+handleScroll(); // 초기 실행
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
         e.preventDefault();
@@ -43,5 +45,3 @@ document.addEventListener("mousemove", (e) => {
         sparkle.remove();
     }, 500); // 0.5초 후 사라짐
 });
-
-app.mount('#app')

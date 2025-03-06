@@ -28,6 +28,39 @@ html, body {
   display: none; /* Chrome, Safari, Edge에서 스크롤바 숨기기 */
 }
 
+/* 🎀 로딩 화면 */
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #FFF7F0;
+  color: #8C5637;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  z-index: 9999;
+  transition: opacity 1s ease-out, visibility 1s ease-out;
+}
+
+.dot {
+  animation: blink 1.5s infinite;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes blink {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 /* 🎀 네비게이션 바 */
 .navbar {
   background-color: #FFB6C1;

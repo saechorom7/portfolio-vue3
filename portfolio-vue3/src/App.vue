@@ -6,10 +6,26 @@ import About from './components/About.vue';
 import Skills from './components/Skills.vue';
 import Projects from './components/Projects.vue';
 import Contact from './components/Contact.vue';
+
+import { ref, onMounted } from 'vue';
+
+const isLoading = ref(true); // 로딩 화면 상태
+
+onMounted(() => {
+  setTimeout(() => {
+    isLoading.value = false; // 3초 후 로딩 화면 제거
+  }, 2000);
+});
+
 </script>
 
 <template>
   <div>
+    <!-- 로딩 화면 -->
+    <div v-if="isLoading" id="loading">
+      <span>🍩 로딩 중<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></span>
+    </div>
+
     <NavBar />
     <Hero />
     <About />

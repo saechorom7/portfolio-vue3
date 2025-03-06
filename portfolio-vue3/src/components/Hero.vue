@@ -14,7 +14,7 @@ const typeEffect = () => {
 };
 
 onMounted(() => {
-  setTimeout(typeEffect, 500); // 애니메이션 시작 지연 (자연스러운 등장 효과)
+  setTimeout(typeEffect, 2000); // 애니메이션 시작 지연 (자연스러운 등장 효과)
 });
 </script>
 
