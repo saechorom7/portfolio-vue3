@@ -1,20 +1,29 @@
-.section {
-  padding: 50px;
-  text-align: center;
+.about-me {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
-/* 🎀 About 섹션 스타일 */
-.about-section {
+.about-section, .skills-section {
   background: linear-gradient(to bottom, #FFF7F0, #FFD1DC);
   padding: 60px;
   text-align: center;
   border-radius: 30px;
-  margin: 30px;
+  margin: 30px 20px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   animation: fadeIn 1s ease-in-out;
 }
 
-/* 🌸 프로필 사진 영역 */
+.about-container {
+  display: flex;
+  align-items: center;
+}
+
+.about-title {
+  width: 20%;
+  margin: 20px 60px 20px 0;
+}
+
 .profile-container {
   display: flex;
   flex-direction: column;
@@ -22,32 +31,66 @@
   margin-bottom: 20px;
 }
 
-.profile-container img {
+.profile-img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   border: 5px solid #FFB6C1;
   box-shadow: 0px 4px 10px rgba(255, 150, 200, 0.3);
   transition: transform 0.3s ease-in-out;
+  animation: shake 2s infinite ease-in-out;
 }
 
-.profile-container img:hover {
+.profile-img:hover {
   transform: scale(1.1);
 }
 
-/* 💬 소개 텍스트 스타일 */
+@keyframes shake {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(2deg); }
+}
+
 .about-text {
+  width: 80%;
   font-size: 1.2rem;
   color: #5B3A29;
   max-width: 600px;
-  margin: 0 auto;
-  padding: 10px 20px;
+  margin: 20px auto 10px;
+  padding: 10px 20px 10px 20px;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 20px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* ✨ 페이드인 효과 */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skills-list li {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #FFF0F5;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+  animation: glow 3s infinite alternate;
+}
+
+.skills-list li:hover {
+  background: #FFD1DC;
+  transform: scale(1.1);
+}
+
+@keyframes glow {
+  0% { box-shadow: 0px 0px 10px rgba(255, 209, 220, 0.5); }
+  100% { box-shadow: 0px 0px 20px rgba(255, 180, 200, 0.8); }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -56,6 +99,28 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* 📱 반응형 스타일 */
+@media (max-width: 1400px) {
+  .about-me {
+    display: inline;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  section#about.section {
+    width: 96%;
+    padding: 20px 0 40px;
+    margin: auto;
+  }
+  
+  section#skills.section {
+    width: 96%;
+    padding: 20px 0 40px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
