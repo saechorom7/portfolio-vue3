@@ -26,31 +26,6 @@
   animation: twinkle 5s infinite alternate;
 }
 
-/* 🎀 한 글자씩 순차적으로 bold 효과 */
-.animation-text span {
-  display: inline-block;
-  font-size: 1.2rem;
-  line-height: 140%;
-  font-weight: normal; /* 기본은 일반 글씨 */
-  color: #40210F;
-  opacity: 0.6; /* 기본적으로 약간 흐리게 */
-  transition: font-weight 0.3s ease-in-out, transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-/* bold 효과와 살짝 커지는 효과 */
-@keyframes boldEffect {
-  0% { font-weight: normal; transform: scale(1); opacity: 0.6; }
-  50% { font-weight: bold; transform: scale(1.1); opacity: 1; }
-  100% { font-weight: normal; transform: scale(1); opacity: 0.6; }
-}
-
-/* bold 효과와 살짝 커지는 효과 */
-@keyframes boldEffect {
-  0% { font-weight: normal; transform: scale(1); }
-  50% { font-weight: bold; transform: scale(1.1); }
-  100% { font-weight: normal; transform: scale(1); }
-}
-
 /* ✨ 반짝이는 애니메이션 */
 @keyframes twinkle {
   0% { opacity: 0.4; }
@@ -114,6 +89,29 @@
   50% {
     opacity: 0;
   }
+}
+
+/* 🎀 텍스트 페이드인 + 귀여운 흔들림 애니메이션 */
+div.text {
+  margin: 45px 0px;
+}
+
+.cute-animation {
+  opacity: 0;
+  line-height: 20%;
+  animation: fadeIn 1.2s ease-out forwards, bounce 2s infinite alternate ease-in-out;
+}
+
+/* 🌸 부드럽게 나타나는 페이드인 효과 */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(5px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* 🍡 둥실둥실 가볍게 위아래로 흔들리는 효과 */
+@keyframes bounce {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-4px); } /* 살짝 위로 올라감 */
 }
 
 /* 🎀 버튼 스타일 */

@@ -20,42 +20,23 @@ const typeEffect = () => {
   }
 };
 
-// 한 글자씩 순차적으로 bold가 되는 애니메이션
-const animateText = (element) => {
-  if (!element) return;
+// 텍스트 애니메이션을 위한 클래스 추가
+const applyAnimation = () => {
+  const text1 = document.getElementById("animatedText");
+  const text2 = document.getElementById("animatedText2");
 
-  const text = element.innerText;
-  element.innerHTML = ""; // 기존 텍스트 비우기
-
-  let spans = [];
-  for (let char of text) {
-    let span = document.createElement("span");
-    span.innerText = char === " " ? "\u00A0" : char; // 공백을 &nbsp;로 대체
-    span.style.fontWeight = "normal";
-    span.style.transition = "font-weight 0.3s ease-in-out";
-    element.appendChild(span);
-    spans.push(span);
-  }
-
-  let currentIndex = 0;
-
-  setTimeout(() => {  // ⏳ 3초 후 애니메이션 시작
-    const interval = setInterval(() => {
-      if (currentIndex < spans.length) {
-        spans[currentIndex].style.fontWeight = "bold";
-        currentIndex++;
-      } else {
-        clearInterval(interval); // 모든 글자가 bold가 되면 멈춤
-      }
-    }, 100); // 150ms 간격으로 변경
-  }, 2500); // ⏳ 3초 대기 후 시작
+  if (text1) text1.classList.add("cute-animation");
+  if (text2) text2.classList.add("cute-animation");
 };
 
 // 컴포넌트가 마운트될 때 실행
 onMounted(() => {
   setTimeout(typeEffect, 2500);
-  animateText(document.getElementById("animatedText"));
-  animateText(document.getElementById("animatedText2"));
+
+  // 3초 후 애니메이션 적용
+  setTimeout(() => {
+    applyAnimation();
+  }, 3000);
 });
 </script>
 
@@ -69,9 +50,11 @@ onMounted(() => {
     <div class="cloud cloud2"></div>
 
     <div class="hero-content">
-      <h1 class="typing" v-html="text"></h1>
-      <p id="animatedText" class="animation-text">I'm a front-end developer who loves cute and charming designs! (oﾟvﾟ)ノ</p>
-      <p id="animatedText2" class="animation-text">I strive to create UI/UX that gives users a comfortable and enjoyable experience! ::&gt;_&lt;::</p>
+      <div class="text">
+        <h1 class="typing" v-html="text"></h1>
+        <p id="animatedText" class="animation-text">I'm a front-end developer who loves cute and charming designs! (oﾟvﾟ)ノ</p>
+        <p id="animatedText2" class="animation-text">I strive to create UI/UX that gives users a comfortable and enjoyable experience! ::&gt;_&lt;::</p>
+      </div>
 
       <!-- 🛠️ 버튼 두 개 -->
       <div class="buttons">
