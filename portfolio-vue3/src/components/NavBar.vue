@@ -25,17 +25,20 @@ onUnmounted(() => {
 <template>
   <nav :class="['navbar', { 'scrolled': isScrolled || isMenuOpen }]">
     <div class="container">
-      <h1 class="logo">🐇 YUJIN</h1>
+      <div class="logo-container">
+        <img  src="/src/assets/umme1.png" alt="logo" width="50px"/>
+        <h1 class="logo">YUJIN</h1>
+      </div>
       
       <!-- 햄버거 버튼 (모바일용) -->
       <button class="menu-toggle" @click="toggleMenu">☰</button>
 
       <ul :class="['nav-links', { 'active': isMenuOpen }]">
-        <li><a href="#hero" @click="toggleMenu">🐇 홈</a></li>
-        <li><a href="#about" @click="toggleMenu">🩰 소개</a></li>
-        <li><a href="#skills" @click="toggleMenu">🧁 기술</a></li>
-        <li><a href="#projects" @click="toggleMenu">🍨 프로젝트</a></li>
-        <li><a href="#contact" @click="toggleMenu">💟 연락처</a></li>
+        <li><a href="#hero" @click="toggleMenu">☁️ Home</a></li>
+        <li><a href="#about" @click="toggleMenu">🩰 About</a></li>
+        <li><a href="#skills" @click="toggleMenu">🧁 Skill</a></li>
+        <li><a href="#projects" @click="toggleMenu">🍨 Project</a></li>
+        <li><a href="#contact" @click="toggleMenu">💟 Contact</a></li>
       </ul>
     </div>
   </nav>

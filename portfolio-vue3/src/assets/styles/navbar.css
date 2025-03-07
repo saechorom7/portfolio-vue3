@@ -1,4 +1,21 @@
 /* 기본 네비게이션 스타일 */
+div.logo-container {
+  display: flex;
+}
+
+div.logo-container img {
+  width: 55px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 5px 0px 0px;
+}
+
+h1.logo {
+  color: #40210F;
+  font-size: 27px !important;
+  padding: 12px 20px 5px;
+}
+
 .navbar {
     position: fixed;
     width: 100%;
@@ -90,6 +107,10 @@
   
   /* 반응형 스타일 */
   @media (max-width: 768px) {
+    .container {
+      padding: 20px 20px;
+    }
+
     .menu-toggle {
       display: block;
     }
@@ -97,14 +118,13 @@
     .nav-links {
       display: none;
       position: absolute;
-      top: 60px;
+      top: 82px;
       right: 0px;
-      gap: 0px;
-      background: #E99AAC;
+      gap: 10px;
+      background: #FFD1DC;
       flex-direction: row;
       width: 100%;
       text-align: center;
-      padding: 10px 0px;
       border-radius: 0px 0px 20px 20px;
     }
   
@@ -112,11 +132,7 @@
       display: flex;
     }
   
-    .nav-links ul {
-      margin: 10px 0;
-    }
-  
     .nav-links li {
-      padding: 10px 0;
+      padding: 20px 5px;
     }
   }

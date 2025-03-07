@@ -32,16 +32,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-
-document.addEventListener("mousemove", (e) => {
-    let sparkle = document.createElement("div");
-    sparkle.className = "sparkle";
-    document.body.appendChild(sparkle);
-
-    sparkle.style.left = `${e.pageX}px`;
-    sparkle.style.top = `${e.pageY}px`;
-
-    setTimeout(() => {
-        sparkle.remove();
-    }, 500); // 0.5초 후 사라짐
-});
