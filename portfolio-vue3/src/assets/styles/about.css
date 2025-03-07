@@ -2,3 +2,73 @@
   padding: 50px;
   text-align: center;
 }
+
+/* 🎀 About 섹션 스타일 */
+.about-section {
+  background: linear-gradient(to bottom, #FFF7F0, #FFD1DC);
+  padding: 60px;
+  text-align: center;
+  border-radius: 30px;
+  margin: 30px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* 🌸 프로필 사진 영역 */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-container img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #FFB6C1;
+  box-shadow: 0px 4px 10px rgba(255, 150, 200, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-container img:hover {
+  transform: scale(1.1);
+}
+
+/* 💬 소개 텍스트 스타일 */
+.about-text {
+  font-size: 1.2rem;
+  color: #5B3A29;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ✨ 페이드인 효과 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 반응형 스타일 */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 40px;
+  }
+  .profile-container img {
+    width: 120px;
+    height: 120px;
+  }
+  .about-text {
+    font-size: 1rem;
+  }
+}
