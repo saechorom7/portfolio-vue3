@@ -1,5 +1,4 @@
 .about-me {
-  display: flex;
   justify-content: center;
   width: 100%;
 }
@@ -9,9 +8,23 @@
   padding: 60px;
   text-align: center;
   border-radius: 30px;
-  margin: 30px 20px;
+  margin: 80px 20px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   animation: fadeIn 1s ease-in-out;
+}
+
+.about-section {
+  width: 91.5%;
+  height: 73vh;
+  overflow: hidden;
+  transition: transform 0.8s ease-in-out;
+  position: relative;
+  background: linear-gradient(to bottom, #FFF7F0, #FFD1DC);
+  border-radius: 30px;
+}
+
+.skills-section {
+  width: 91.5%;
 }
 
 .about-container {
@@ -57,18 +70,120 @@
   max-width: 600px;
   margin: 20px auto 10px;
   padding: 10px 20px 10px 20px;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 20px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #FFF0F5, #FFE4E1);
+  border-radius: 30px;
+  box-shadow: 0px 10px 30px rgba(255, 180, 200, 0.3);
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  animation: fadeInText 1.5s ease-in-out;
+}
+
+/* 📌 About 내용 (스크롤 시 전환) */
+.about-content {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  transition: transform 0.8s ease-in-out;
+}
+
+.page-two .about-content {
+  transform: translateY(-100%);
+}
+
+/* 📌 네비게이션 버튼 */
+.nav-buttons {
+  bottom: 15px;
+  left: 50%;
+  display: flex;
+  gap: 10px;
+}
+
+.arrow-btn {
+  background: #FFD1DC;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.arrow-btn:hover {
+  background: #FFC0CB;
+}
+
+/* 💭 말풍선 애니메이션 */
+.about-text {
+  position: relative;
+  animation: fadeInText 1.5s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-text:hover {
+  transform: scale(1.02);
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✨ 순차적으로 등장하는 애니메이션 */
+.fade-in-text {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeInSmooth 1.2s ease-in-out forwards;
+}
+
+.fade-in-text:nth-child(1) { animation-delay: 0.3s; }
+.fade-in-text:nth-child(2) { animation-delay: 0.6s; }
+.fade-in-text:nth-child(3) { animation-delay: 0.9s; }
+.fade-in-text:nth-child(4) { animation-delay: 1.2s; }
+
+@keyframes fadeInSmooth {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🌟 부드럽게 반짝이는 강조 효과 */
+.twinkle-effect {
+  animation: twinkle 2s infinite alternate;
+  font-weight: bold;
+  color: #ee9ba8;
+  text-shadow: 0px 0px 5px rgba(255, 150, 200, 0.5);
+}
+
+@keyframes twinkle {
+  0% { text-shadow: 0px 0px 8px rgba(255, 237, 250, 0.3); }
+  100% { text-shadow: 0px 0px 18px rgba(255, 180, 220, 0.7); }
+}
+
+/* 📌 스킬 리스트 가로 스크롤 */
+.skills-wrapper {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 10px;
 }
 
 .skills-list {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
   list-style: none;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
+  flex-wrap: nowrap;
 }
 
 .skills-list li {
@@ -127,7 +242,11 @@
 /* 📱 반응형 스타일 */
 @media (max-width: 768px) {
   .about-section {
+    width: 96%;
     padding: 40px;
+  }
+  .skills-section {
+    width: 96%;
   }
   .profile-container img {
     width: 120px;
@@ -135,5 +254,9 @@
   }
   .about-text {
     font-size: 1rem;
+  }
+  .skills-list {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
